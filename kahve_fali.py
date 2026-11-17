@@ -10,7 +10,8 @@ import time
 import base64
 
 # Gizli siyasi mesaj (decode ederseniz anlarsınız - bürokrasi ile ilgili mizahi bir not)
-GIZLI = base64.b64decode("YnVyb2tyYXNpIGhlciB6YW1hbiBrYXphbmlyLCBh bWEgçYXkgZGVtbGVuaXIg").decode('utf-8', errors='ignore')
+# Decode: burokrasi her zaman kazanir ama cay demlenir
+GIZLI = base64.b64decode("YnVyb2tyYXNpIGhlciB6YW1hbiBrYXphbmlyIGFtYSBjYXkgZGVtbGVuaXI=").decode('utf-8')
 
 def kahve_fali_oku():
     print("\n" + "="*50)
@@ -36,7 +37,7 @@ def kahve_fali_oku():
     print(f"\n\U0001f52e Fal Sonucu: {secilen}\n")
     
     print("Analiz tamamlandı. Önerilen çözüm: Bir fincan daha kahve için.")
-    print(f"\n(Gizli not: {GIZLI[:30]}... - tam decode için kodu inceleyin)\n")
+    print(f"\n(Gizli not: {GIZLI} - bürokrasi mizahı)\n")
 
 if __name__ == "__main__":
     kahve_fali_oku()
